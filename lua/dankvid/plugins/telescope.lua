@@ -1,0 +1,24 @@
+local status, telescope = pcall(require, "telescope")
+if not status then
+  return
+end
+
+
+local actions_setup, action = pcall(require, "telescope.setup")
+if not actions_setup then
+  return
+end
+
+telescope.setup({
+  defaults = {
+    mappings = {
+      i = {
+        ["<C-k>"] = actions.move_selection_previous, -- move to the prev result
+        ["<C-j>"] = actions.move_selection_next, --move top the next result
+        ["<C-q>"] = actions.send.send_selection_to_qflist + actions.open_qflist -- send selected to quickfixlist
+      }
+    }
+  }
+})
+
+telescope.load_extension("fzf")
