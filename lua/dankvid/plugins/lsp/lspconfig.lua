@@ -30,8 +30,8 @@ local on_attach = function(client, bufnr)
 end
 
 --enables autocompletion
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
+local capabilities = cmp_nvim_lsp.default_capabilities()
+capabilities.offsetEncoding = "utf-8"
 lspconfig["clangd"].setup({
   capabilities = capabilities,
   on_attach = on_attach

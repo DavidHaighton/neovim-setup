@@ -67,6 +67,8 @@ return packer.startup(function(use)
   --git
   use("lewis6991/gitsigns.nvim") -- shows what changed in a file since commit
   use("tpope/vim-fugitive")
+  -- startup
+  use("startup-nvim/startup.nvim")
   if packer_bootstrap then
     require("packer").sync()
   end

@@ -13,9 +13,9 @@ telescope.setup({
   defaults = {
     mappings = {
       i = {
-        ["<C-k>"] = actions.move_selection_previous, -- move to the prev result
-        ["<C-j>"] = actions.move_selection_next, --move top the next result
-        ["<C-q>"] = actions.send.send_selection_to_qflist + actions.open_qflist -- send selected to quickfixlist
+        ["<C-k>"] = action.move_selection_previous, -- move to the prev result
+        ["<C-j>"] = action.move_selection_next, --move top the next result
+        ["<C-q>"] = action.send.send_selection_to_qflist + action.open_qflist -- send selected to quickfixlist
       }
     }
   }

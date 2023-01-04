@@ -14,4 +14,4 @@ require("dankvid.plugins.autopairs")
 require("dankvid.plugins.treesitter")
 require("dankvid.plugins.git.gitsigns")
 require("dankvid.plugins.git.fugitive")
--- todo: add startup screen
+require("dankvid.plugins.startup")
